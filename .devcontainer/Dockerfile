@@ -1,8 +1,8 @@
 # FROM nvcr.io/nvidia/tensorrt:19.10-py3
 #FROM nvidia/cuda:10.2-cudnn7-devel-ubuntu18.04
 
-FROM nvcr.io/nvidia/tensorrt:21.06-py3
-#FROM nvidia/cuda:11.4.1-cudnn8-devel-ubuntu20.04
+# FROM nvcr.io/nvidia/tensorrt:21.06-py3
+FROM nvidia/cuda:11.6.1-cudnn8-devel-ubuntu20.04
 
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends ca-certificates software-properties-common \

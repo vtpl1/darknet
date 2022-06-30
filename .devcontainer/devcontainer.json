@@ -45,13 +45,15 @@
 		"--cap-add=SYS_PTRACE",
 		"--security-opt",
 		"seccomp=unconfined",
-		"--gpus=all",
-		"-e",
-		"NVIDIA_DRIVER_CAPABILITIES=video,compute,utility",
-		"-e",
-		"DISPLAY=${env:DISPLAY}",
-		"-v",
-		"/tmp/.X11-unix:/tmp/.X11-unix"
+		"--add-host",
+		"git.videonetics.com:172.16.1.93",
+		// "--gpus=all",
+		// "-e",
+		// "NVIDIA_DRIVER_CAPABILITIES=video,compute,utility",
+		// "-e",
+		// "DISPLAY=${env:DISPLAY}",
+		// "-v",
+		// "/tmp/.X11-unix:/tmp/.X11-unix"
 	],
 	"containerEnv": {
 		"LD_LIBRARY_PATH": "${containerWorkspaceFolder}/lib_module_dependencies:${containerWorkspaceFolder}/build/vcpkg_installed/x64-mixed/debug/lib/",
